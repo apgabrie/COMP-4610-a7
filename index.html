@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!--
+  Andrew Gabriel, andrew_gabriel@student.uml.edu
+  COMP 4610 - 201, Assignment 7
+  This file contains the HTML for Assignment 7.
+-->
+
+<html lang="en">
+<head>
+    <title>Assignment 7</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>   <![endif]-->
+    
+    <!-- Style-sheets -->
+    <link rel="stylesheet" type="text/css" href="css/mtstyle.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div>
+            <h1>Multiplication Table</h1>
+        </div>
+        <div>
+            <!-- Directions -->
+            <p> This is an application to display a multiplication table. <br/>
+                Please enter four integers. The first two should be the smallest and 
+                largest numbers which go along the width, and the second two should be 
+                the smallest and largest numbers which go along the height.</p>
+            
+            <!-- Input Form -->
+            <form id="myForm" action="form_action.asp">
+                  <h2>Horizontal:</h2> <br/>
+                  First Number: <input id="myFormInput1" type="text" name="x1" number="true" autocomplete="off" required/><br/>
+                  Last Number: <input id="myFormInput2" type="text" name="x2" number="true" autocomplete="off" required/><br/><br/>
+                  <h2>Vertical:</h2> <br/>
+                  First Number: <input id="myFormInput3" type="text" name="x3" number="true" autocomplete="off" required/><br/>
+                  Last Number: <input id="myFormInput4" type="text" name="x4" number="true" autocomplete="off" required/><br/>
+                  <input class="submit" type="submit" value="Create Table">
+                  <label id="overflowWarning"></label>
+            </form>
+            
+            <!-- Table etc. -->
+            <table id="multTable"></table>
+        </div>
+    </div>
+    
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+        <!-- The jquery validation plugin is from https://jqueryvalidation.org/ . -->
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/mult-table.js"></script>
+</body>
+
+</html>

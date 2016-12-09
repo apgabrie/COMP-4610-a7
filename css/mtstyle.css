@@ -1,0 +1,67 @@
+/*
+ * Andrew Gabriel, andrew_gabriel@student.uml.edu
+ * COMP 4610 - 201, Assignment 7
+ * This file contains styling for the multiplication table aspect of Assignment 7.
+ */
+
+/* Styles for the multiplication table*/
+table {
+    margin: auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-color: white;
+}
+
+tr {
+    text-align: center;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+}
+
+tr:first-child, td:first-child {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(2n+2) > td:nth-child(2n), tr:nth-child(2n+3) > td:nth-child(2n+3) {
+    background-color: #c4c4c4;
+}
+
+
+/* Styles the form containing input values */
+input {
+    margin: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    font-size: 120%;
+}
+
+label {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    color: red;
+    font-size: 80%;
+}
+
+input {
+    color: #09550b;
+    background-color: #97fb9c;
+}
+
+input.error {
+	color: #460232;
+    background-color: #fe8395;
+}
+
+.submit {
+	color: black;
+    background-color: white;
+}
+
+
